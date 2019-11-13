@@ -1,11 +1,14 @@
 <html>
     <head>
         <title>Halacha Cartoon Maker</title>
-        <script src="./main.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+        <script defer src="./main.js"></script>
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <div>
+        <div class="no-print">
             <h1>
                 Welcome to the Halacha Cartoon Maker
             </h1>
@@ -14,6 +17,52 @@
                 <li>Enter in the info</li>
                 <li>Click "print" (or Ctrl+p) to print</li>
             </ul>
+            <textarea cols="80" rows="20" id="front-editor" oninput="renderMarkdown();"></textarea>
+            <br/>
+            <input type='file' id="back-editor" placeholder="upload an image file" accept="image/*"/> 
+            <hr/>
+        </div>
+        <div class="page">
+            page one
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+        </div>
+        <div class="page">
+            page 2
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
+            <div class="card">
+                card 1
+            </div>
         </div>
     </body>
 </html>
