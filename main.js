@@ -2,10 +2,25 @@
 var converter = new showdown.Converter();
 var editor = document.querySelector('#front-editor');
 var renderCard = document.querySelector('.card');
-renderMarkdown = () => {
+function renderMarkdown(){
     var html = converter.makeHtml(editor.value);
-    document.querySelector('.card').innerHTML = html;
-};
+    var frontCards = document.querySelectorAll('#page1 > .card');
+    frontCards.forEach(function(card){
+        card.innerHTML = html;
+    });
+    // document.querySelector('.card').innerHTML = html;
+}
+function copyPictures(){
+    var src = document.querySelector("#cartoonSource").value;
+    var backImages = document.querySelectorAll('#page2 > .card> img');
+    backImages.forEach(function(img){
+        img.src = src;
+    });
+    // document.querySelector('.card').innerHTML = html;
+}
+
+
+// set textarea to handle tab correctly
 var textareas = document.getElementsByTagName('textarea');
 var count = textareas.length;
 for(var i=0;i<count;i++){

@@ -3,22 +3,26 @@
     .no-print {
         display: none !important 
     }
+}
+*{
+    box-sizing: border-box;
+}
     .page {
       width:100%; 
       height:100%;
       page-break-after:always 
+      border: 1px black solid;
     }
     .card {
-        width: 50%;
-        height: 33.33333%;
+        height: 50%;
+        width: 33%;
+        padding:0 15px;
         display: inline-block;
+      border: 1px black solid;
     }
-}
+    /* .page:nth-child(2) { */
+    /*     margin-top:2px; */
+    /* } */
 .CodeMirror {
 	height: 300px;
-}
-.page {
-    width: 8.5in;
-    height: 11in;
-    background: grey;
 }

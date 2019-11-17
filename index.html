@@ -19,11 +19,11 @@
             </ul>
             <textarea cols="80" rows="20" id="front-editor" oninput="renderMarkdown();"></textarea>
             <br/>
+            <input id="cartoonSource" type="text" placeholder="Paste image link" onblur="copyPictures();"/>
             <input type='file' id="back-editor" placeholder="upload an image file" accept="image/*"/> 
             <hr/>
         </div>
-        <div class="page">
-            page one
+        <div id="page1" class="page">
             <div class="card">
                 card 1
             </div>
@@ -43,25 +43,24 @@
                 card 1
             </div>
         </div>
-        <div class="page">
-            page 2
+        <div id="page2" class="page">
             <div class="card">
-                card 1
+                <img />
             </div>
             <div class="card">
-                card 1
+                <img />
             </div>
             <div class="card">
-                card 1
+                <img />
             </div>
             <div class="card">
-                card 1
+                <img />
             </div>
             <div class="card">
-                card 1
+                <img />
             </div>
             <div class="card">
-                card 1
+                <img />
             </div>
         </div>
     </body>
